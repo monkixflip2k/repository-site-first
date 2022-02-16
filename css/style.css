@@ -1,0 +1,331 @@
+@font-face {
+    font-family: 'montserratbold';
+    src: url('../fonts/montserrat-bold-webfont.woff2') format('woff2'),
+         url('../fonts/montserrat-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'montserratregular';
+    src: url('../fonts/montserrat-regular-webfont.woff2') format('woff2'),
+         url('../fonts/montserrat-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+html{
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+
+
+
+body{
+    min-width: 320px;
+    margin: 0;
+    padding: 0;
+    font-family: "montserratregular", "Arial", sans-serif;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+    color: #000;
+    background-color: rgba(249, 246, 241, 1);
+}
+
+
+header {
+    background-color:rgba(249, 246, 241, 1);
+    min-height: 40px;
+
+}
+
+.section{
+    width: 100%;
+
+}
+
+.section__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.header-menu{
+    min-height: 90px;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    position:fixed;
+    background-color: rgba(249, 246, 241, 1);
+
+}
+
+.container{
+    position: relative;
+    max-width: 1110px;
+    margin: 0 auto;
+}
+
+.banner{
+    padding: 90px;
+}
+
+.delivery{
+    
+    background-color: rgb(86, 107, 66);
+    color: white;
+    text-align: center;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-size: 50px;
+}
+
+.logo{
+    padding-top: 20px;
+}
+.basket__item{
+    padding: 5px;
+}
+
+.mainmenu__item{
+    padding: 15px;
+}
+.mainmenu__list, .basket__list{
+    display: flex;
+    list-style: none;
+    justify-content:space-between;
+    padding-left: 0;   
+    align-items: center;
+}
+.slider__item{
+    display: flex;
+    padding-top: 166px;
+    justify-content: space-between;
+    min-height: 564px;
+    background: url('../img/running_shoes_PNG5823.png') no-repeat right center;
+}
+
+.slider__text{
+    font-size: 30px;
+}
+.slider__big-text{
+    font-family: "montserratbold", "Arial", sans-serif;
+    font-weight: bold;
+    font-size: 55px;
+    text-transform: uppercase;
+}
+.button{
+    display: block;
+    width: 240px;
+    padding: 22px 0;
+    text-align: center;
+    background-color: #d7b399;
+    text-transform: uppercase;
+    font-size: 16px;
+    color: #fff;
+}
+.slider__item-price{
+    font-family: "montserratbold", "Arial", sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.slider__price--old{
+    font-size: 24px;
+    text-decoration-line: line-through;
+}
+.slider__price--new{
+    font-size: 42px;
+    color: #d84033;
+}
+.slider__button{
+    position: absolute;
+    top: 50%;
+    border: 0;
+    background: transparent;
+}
+.slider__button--prev{
+    left: -100px;
+}
+.slider__button--next{
+    right: -100px;
+}
+.dress__wrapper{
+    flex-wrap: wrap;
+}
+.dress__item{
+    width: 277px;
+    height: 236px;
+    text-align: right;
+    position: relative;
+}
+
+.dress__item img{
+    height: 100%;
+}
+
+.dress__item--grey{
+    background-color: #f4f4f4;
+}
+.dress__item--cream{
+    background-color: #f9f6f1;
+}
+.dress_text{
+    font-family: "montserratregular", "Arial", sans-serif;
+    position: absolute;
+    left: 5px;
+    font-size: 30px;
+    bottom: 5px;
+    padding-left: 7px;
+}
+
+.menu__link{
+    text-decoration: none;
+    padding: 5px 5px;
+    color: black;
+}
+.menu a:hover{
+    text-decoration: underline;
+    color: rgb(188, 197, 61);
+}
+.button{
+    text-decoration: none;
+}
+.banner a:hover{
+    text-decoration: underline;
+    color: rgb(207, 211, 150);
+}
+.block1{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+}
+
+.block2{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.navbar-toggler{
+    display: none;
+}
+
+
+@media (max-width: 1110px){
+    .container{
+        width: auto;
+        padding: 0 30px;
+    }
+}
+
+@media (max-width: 1326px){
+    .slider__button--prev{
+        left: 0;
+    }
+    .slider__button--next{
+        right: 0;
+    }
+}
+
+@media (max-width: 768px){
+    .slider__item{
+        display: none;
+    }
+    
+    .slider__button{
+        display: none;
+    }
+    .header{
+        min-height: 90px;
+    }
+}
+
+@media (max-width: 992px){
+    .menu__wrapper{
+        flex-wrap: wrap;
+    }
+    .logo{
+        order: -1;
+        width: 100%;
+    }
+}
+
+@media(max-width:768px){
+    .logo{
+        order: -1;
+        width: 70%;
+    }
+    .basket{
+        order: -1;
+        text-align: right;
+    }
+}
+
+@media(max-width:600px){
+    .basket,
+    .menu
+    {
+        display: none;
+        width: 100%;
+    }
+    .navbar-toggler{
+        display: block;
+    }
+    .mainmenu__list{
+        flex-direction: column;
+    }
+}
+
+@media(max-width:1110px){
+    .dress__item{
+        width: 25%;
+    }
+}
+
+@media(max-width:768px){
+    .dress__item{
+        width: 33%;
+    }
+}
+
+@media(max-width: 576px){
+    .dress__item{
+        width: 50%;
+    }
+}
+
+@media(max-width: 420px){
+    .dress__item{
+        width: 300%;
+    }
+}
+
+.show{
+    display: block;
+}
+
+@media(max-width:1069px){
+    .delivery__container{
+        font-size: 20px;
+    }
+}
+.footer{
+    background-color: rgb(86, 107, 66);
+    color: white;
+    text-align: center;
+    min-height: 100px;
+}
+.footer_copy{
+    padding-top: 50px;
+}
